@@ -1,0 +1,2 @@
+For configurating the proxy is necesary execute the command with aditional parameters :
+    */opt/phantom/bin/phantomjs --proxy=10.20.4.15:3128 time-load.js http://www.google.com
