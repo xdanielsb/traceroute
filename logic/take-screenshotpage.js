@@ -1,4 +1,9 @@
 /*
+ *This code take an screenshot of a page that I have already specify
+ *
+ */
+
+/*
  *For scrapping the page
  */
 var page = require("webpage").create();
@@ -14,8 +19,4 @@ page.open(url,function(status){
     page.render(namepage+".png");
     phantom.exit();
 })
-
-/*
- *
- */
 
