@@ -37,10 +37,12 @@ casper.start(url, function() {
         submit = document.getElementsByTagName("input")[3];
         submit.click();        
     }, ip);
+     //casper.capture('main.png');
     
 });
 
 casper.then(function() {
+   // casper.capture('content.png');
     var info = this.evaluate(function evaluateStuffAfterStart() {
         text= document.querySelector("pre").textContent;
         return text;
