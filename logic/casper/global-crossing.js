@@ -34,11 +34,11 @@ casper.start(url, function() {
         //Select the source router
         for(var i=0; i<options.length; i++){
             if(options[i].value==router){
-                var pos = i;
+                document.getElementsByTagName('option')[i].selected = 'selected';
             }
         }
         
-        document.getElementsByTagName('option')[pos].selected = 'selected';
+        
         //Select the input
         input = document.getElementsByName("destAddress")[0] ;
         //Change the address

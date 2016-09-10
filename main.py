@@ -21,12 +21,15 @@ def traceroute():
     data = request.form
     #extracting the parameters
     address= data["ip"]
+    source = data["source"]
     phantom = "export PATH=$PATH:/opt/phantom/bin/ && "
     casper = "/opt/casperjs/bin/casperjs "
     script = "~/Documents/myProjects/scripting/logic/casper/global-crossing.js "
-    arguments = "--addr="+address
+    argumentip = "--addr="+address
+    argumentsource = " --source="+source
     pipe = " | tee "+address+".temp"
-    command = phantom + casper + script + arguments + pipe 
+    command = phantom + casper + script + argumentip + argumentsource + pipe 
+    #execute the command
     os.system(command)
     #reading the answer
     response = open(address+".temp", "r+").read()    

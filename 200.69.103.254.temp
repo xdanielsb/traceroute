@@ -1,0 +1,35 @@
+traceroute
+Protocol [ip]: ip
+Target IP address: 200.69.103.254
+Source address: 
+Numeric display [n]: n
+Timeout in seconds [3]: 1
+Probe count [3]: 2
+Minimum Time to Live [1]: 1
+Maximum Time to Live [30]: 30
+Port Number [33434]: 
+Loose, Strict, Record, Timestamp, Verbose[none]: 
+Type escape sequence to abort.
+Tracing the route to static-200-69-103-254.static.etb.net.co (200.69.103.254)
+VRF info: (vrf in name/id, vrf out name/id)
+  1 ae2-20G.ar2.CLK1.gblx.net (67.16.179.18) 0 msec 0 msec
+  2 po20.br01.hkg15.pccwbtn.net (63.216.142.121) 212 msec 212 msec
+  3 TenGE0-0-0-1.br04.ash01.pccwbtn.net (63.223.40.6) [AS 3491] 224 msec 228 msec
+  4 ash-b1-link.telia.net (213.248.91.250) [AS 1299] 220 msec 216 msec
+  5 ash-bb3-link.telia.net (80.91.252.45) [AS 1299] 216 msec
+    ash-bb4-link.telia.net (62.115.113.216) [AS 1299] 216 msec
+  6 boca-b1-link.telia.net (62.115.113.199) [AS 1299] 228 msec
+    boca-b1-link.telia.net (62.115.113.201) [AS 1299] 228 msec
+  7 empresa-ic-316508-boca-b1.c.telia.net (62.115.146.183) [AS 1299] 280 msec 280 msec
+  8  *  * 
+  9  *  * 
+ 10  *  * 
+ 11  *  * 
+ 12  *  * 
+ 13  *  * 
+ 14  *  * 
+ 15  *  * 
+ 16  *  * 
+ 17  *  * 
+ 18  *  * 
+ 19  * 

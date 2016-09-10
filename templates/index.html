@@ -6,8 +6,8 @@
 </head>
 <body>
     <form action="/traceroute/" method="post">
-        <select name="source" size=1>
 
+<select name="source" size=1>
 <option value="Asia" disabled="disabled">Asia</option>
 <option value="119637" >Chai Wan, CHINA - CLK1</option>
 <option value="145522" >Chuo-ku, Tokyo, JAPAN - TYO1</option>
@@ -88,9 +88,8 @@
 <option value="135272" >Washington, UNITED STATES - WDC2</option>
 </select>
 
-
-        ip: <input type="text" name="ip"/>
-        origin: <input type="" name="origin" />
+        ip: <input type="text" name="ip"/><br>
+        origin: <input type="" name="origin" /> 
         submit: <input type="submit">
     </form>
     {%if response%}
