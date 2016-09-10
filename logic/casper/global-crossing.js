@@ -4,11 +4,12 @@ var casper = require('casper').create({
         loadImages:  false,        // The WebPage instance used by Casper will
         loadPlugins: false         // use these settings
     },
-    logLevel: "debug",              // Only "info" level messages will be logged
-    verbose: true                  // log messages will be printed out to the console
+  //  logLevel: "debug",              // Only "info" level messages will be logged
+  //  verbose: true                  // log messages will be printed out to the console
 });
 var utils = require('utils');
 var ip = casper.cli.get('addr');
+var router = casper.cli.get('router');
 
 
 //Initial parameters for casper js
@@ -26,9 +27,18 @@ casper.on("page.error", function(msg, trace) {
 
 // Start casper js
 casper.start(url, function() {
-    this.evaluate(function evaluateStuffAfterStart(ip) {
+    this.evaluate(function evaluateStuffAfterStart(ip, router) {
+
+        options = document.getElementsByTagName('option');
+        
         //Select the source router
-        document.getElementsByTagName('option')[7].selected = 'selected';
+        for(var i=0; i<options.length; i++){
+            if(options[i].value==router){
+                var pos = i;
+            }
+        }
+        
+        document.getElementsByTagName('option')[pos].selected = 'selected';
         //Select the input
         input = document.getElementsByName("destAddress")[0] ;
         //Change the address
@@ -36,7 +46,7 @@ casper.start(url, function() {
         //Submit the form
         submit = document.getElementsByTagName("input")[3];
         submit.click();        
-    }, ip);
+    }, ip, router);
      casper.capture('main.png');   
 });
 

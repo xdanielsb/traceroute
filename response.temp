@@ -1,0 +1,64 @@
+[36m[info][0m [phantom] Starting...
+[36m[info][0m [phantom] Running suite: 3 steps
+[32;1m[debug][0m [phantom] opening url: http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace, HTTP GET
+[32;1m[debug][0m [phantom] Navigation requested: url=http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace, type=Other, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] url changed to "http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace"
+[32;1m[debug][0m [phantom] Successfully injected Casper client-side utilities
+[36m[info][0m [phantom] Step anonymous 2/3 http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace (HTTP 200)
+[32;1m[debug][0m [phantom] Capturing page to /home/daniel/Documents/myProjects/scripting/main.png
+[36m[info][0m [phantom] Capture saved to /home/daniel/Documents/myProjects/scripting/main.png
+[36m[info][0m [phantom] Step anonymous 2/3: done in 7095ms.
+[32;1m[debug][0m [phantom] Navigation requested: url=http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi, type=FormSubmitted, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] url changed to "http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi"
+[32;1m[debug][0m [phantom] Successfully injected Casper client-side utilities
+[36m[info][0m [phantom] Step anonymous 3/3 http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi (HTTP 200)
+[32;1m[debug][0m [phantom] Capturing page to /home/daniel/Documents/myProjects/scripting/content.png
+[36m[info][0m [phantom] Capture saved to /home/daniel/Documents/myProjects/scripting/content.png
+traceroute
+Protocol [ip]: ip
+Target IP address: 200.69.103.254
+Source address: 
+Numeric display [n]: n
+Timeout in seconds [3]: 1
+Probe count [3]: 2
+Minimum Time to Live [1]: 1
+Maximum Time to Live [30]: 30
+Port Number [33434]: 
+Loose, Strict, Record, Timestamp, Verbose[none]: 
+Type escape sequence to abort.
+Tracing the route to static-200-69-103-254.static.etb.net.co (200.69.103.254)
+VRF info: (vrf in name/id, vrf out name/id)
+  1 ae0.ar9.AMS2.gblx.net (67.16.146.126) 0 msec
+    ae1.ar9.AMS2.gblx.net (67.16.130.182) 4 msec
+  2 4.68.110.197 0 msec 4 msec
+  3 ae-129-3515.edge6.Amsterdam1.Level3.net (4.69.162.234) [AS 3356] 0 msec
+    ae-240-3616.edge6.Amsterdam1.Level3.net (4.69.162.254) [AS 3356] 0 msec
+  4 4.68.111.178 [AS 3356] 0 msec 0 msec
+  5 adm-bb3-link.telia.net (62.115.141.50) [AS 1299] 0 msec
+    adm-bb3-link.telia.net (62.115.141.4) [AS 1299] 0 msec
+  6 ldn-bb3-link.telia.net (213.155.136.98) [AS 1299] 8 msec
+    ldn-bb2-link.telia.net (62.115.134.27) [AS 1299] 8 msec
+  7 nyk-bb2-link.telia.net (62.115.116.87) [AS 1299] [MPLS: Label 387130 Exp 0] 76 msec
+    ash-bb4-link.telia.net (213.248.65.210) [AS 1299] 80 msec
+  8 boca-b1-link.telia.net (62.115.113.199) [AS 1299] 108 msec
+    boca-b1-link.telia.net (62.115.113.201) [AS 1299] 108 msec
+  9 boca-b1-link.telia.net (62.115.113.199) [AS 1299] 112 msec
+    ash-bb3-link.telia.net (62.115.137.60) [AS 1299] 100 msec
+ 10  *  * 
+ 11  *  * 
+ 12  *  * 
+ 13  *  * 
+ 14  *  * 
+ 15  *  * 
+ 16  *  * 
+ 17  *  * 
+ 18  *  * 
+ 19  *  * 
+ 20  *  * 
+ 21  *  * 
+ 22  *  * 
+ 23  *  * 
+[36m[info][0m [phantom] Step anonymous 3/3: done in 47052ms.
+[36m[info][0m [phantom] Done 3 steps in 47052ms
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] url changed to "about:blank"

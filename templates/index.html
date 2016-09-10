@@ -5,6 +5,98 @@
     <title></title>
 </head>
 <body>
-    
+    <form action="/traceroute/" method="post">
+        <select name="source" size=1>
+
+<option value="Asia" disabled="disabled">Asia</option>
+<option value="119637" >Chai Wan, CHINA - CLK1</option>
+<option value="145522" >Chuo-ku, Tokyo, JAPAN - TYO1</option>
+<option value="145366" >Singapore, SINGAPORE - QPG1</option>
+
+<option value="Europe" disabled="disabled">Europe</option>
+<option value="146702" >Ultimo, AUSTRALIA - RSE1</option>
+<option value="149996" > Hamburg, GERMANY - HAM1</option>
+<option value="119611" >Amsterdam, NETHERLANDS - AMS2</option>
+<option value="118042" >Antwerp, BELGIUM - NDL1.ANT</option>
+<option value="149904" >Basingstoke, Hampshire, UNITED KINGDOM - BBS1</option>
+<option value="150196" >Berlin, GERMANY - KIT1.BER</option>
+<option value="147205" >Dublin, IRELAND - DUB1</option>
+<option value="137782" >Frankfurt, GERMANY - FRA4</option>
+<option value="149982" >Glostrup, DENMARK - CPH1</option>
+<option value="154931" >Helsinki, FINLAND - HEL1</option>
+<option value="149302" >Leeds, UNITED KINGDOM - LBA1</option>
+<option value="149262" >Leigh, UNITED KINGDOM - MAN1</option>
+<option value="152202" >London, UNITED KINGDOM - LON2</option>
+<option value="131962" >London, UNITED KINGDOM - LON3</option>
+<option value="154771" >Luxembourg, LUXEMBOURG - BCE1.LUX</option>
+<option value="137731" >Madrid, SPAIN - MAD1</option>
+<option value="186781" >Milano, ITALY - LIN1</option>
+<option value="149362" >Munich, GERMANY - MUN1</option>
+<option value="149276" >Nottingham, UNITED KINGDOM - NQT1</option>
+<option value="104830" >Oslo, NORWAY - OSL2</option>
+<option value="152142" >Paris, FRANCE - CDG3</option>
+<option value="154731" >Rotterdam, NETHERLANDS - VDG1.RTM</option>
+<option value="154360" >Slough, UNITED KINGDOM - LHR1</option>
+<option value="153980" >Solihull, UNITED KINGDOM - BHX1</option>
+<option value="145146" >Stockholm, SWEDEN - ARN3</option>
+<option value="150227" >Stuttgart, GERMANY - VDL1.STR</option>
+
+<option value="Latin America" disabled="disabled">Latin America</option>
+<option value="154487" >Vienna, AUSTRIA - VIE1</option>
+<option value="407018" >Bogota, COLUMBIA - CXV1.BOG</option>
+<option value="153102" >Buenos Aires, ARGENTINA - EZE1</option>
+<option value="153584" >Panama City, PANAMA - PTY1</option>
+<option value="407165" >Quito, ECUADOR - TUI1.UIO</option>
+<option value="153622" >Santiago, CHILE - SCL1</option>
+<option value="154024" >Sao Cristavao, Rio de Janeiro, BRAZIL - GIG1</option>
+
+
+<option value="US" disabled="disabled">US</option>
+<option value="153562" >Sao Paulo, BRAZIL - GRU1</option>
+<option value="144523" >Anaheim, UNITED STATES - SNA1</option>
+<option value="153887" >Ashburn, UNITED STATES - DCA3</option>
+<option value="119621" >Atlanta, UNITED STATES - ATL1</option>
+<option value="154394" >Baltimore, UNITED STATES - BWI1.BWI</option>
+<option value="145705" >Boston, UNITED STATES - BOS1</option>
+<option value="118462" >Chicago, UNITED STATES - CHI1</option>
+<option value="137902" >Cleveland, UNITED STATES - CLE1</option>
+<option value="118468" >Dallas, UNITED STATES - DAL1</option>
+<option value="137719" >Denver, UNITED STATES - DEN2</option>
+<option value="146667" >Houston, UNITED STATES - HOU1</option>
+<option value="137725" >Indianapolis, UNITED STATES - IND1</option>
+<option value="145422" >Kansas City, UNITED STATES - KCY1</option>
+<option value="118724" >Los Angeles, UNITED STATES - LAX1</option>
+<option value="131943" >Miami, UNITED STATES - MIA1</option>
+<option value="104714" >Miami, UNITED STATES - MIA2</option>
+<option value="151255" >Milwaukee, UNITED STATES - MKE1.MKE</option>
+<option value="144422" >Minneapolis, UNITED STATES - MIN1</option>
+<option value="119403" >New York, UNITED STATES - JFK1</option>
+<option value="154059" >Palo Alto, UNITED STATES - PAO2</option>
+<option value="119643" >Philadelphia, UNITED STATES - PHI1</option>
+<option value="119409" >Phoenix, UNITED STATES - PHX1</option>
+<option value="163364" >Pittsburgh, UNITED STATES - PIT2.PIT</option>
+<option value="150042" >Rochester, UNITED STATES - ROC1</option>
+<option value="137803" >Sacramento, UNITED STATES - SAC1</option>
+<option value="149962" >Saint Louis, UNITED STATES - STL1.STL</option>
+<option value="149316" >San Diego, UNITED STATES - SAN1</option>
+<option value="154077" >San Jose, UNITED STATES - SJC2</option>
+<option value="192297" >Seattle, UNITED STATES - SEA1</option>
+<option value="147487" >Southfield, UNITED STATES - DET1</option>
+<option value="119649" >Sunnyvale, UNITED STATES - SNV2</option>
+<option value="146167" >Tampa, UNITED STATES - TPA1</option>
+<option value="144482" >Toronto, CANADA - YYZ1</option>
+<option value="135272" >Washington, UNITED STATES - WDC2</option>
+</select>
+
+
+        ip: <input type="text" name="ip"/>
+        origin: <input type="" name="origin" />
+        submit: <input type="submit">
+    </form>
+    {%if response%}
+        <p>
+        {{response}}
+        </p>
+    {%endif%}
 </body>
 </html>

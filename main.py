@@ -3,8 +3,8 @@
 """
 
 #Import the framework
-from flask import Flask, render_template
-import subprocess
+from flask import Flask, render_template, request
+import os
 
 
 #Create the app
@@ -14,12 +14,23 @@ app = Flask(__name__)
 @app.route('/')
 def homepage():
     #request the program for doing the request
-    command = "export PATH=$PATH:/opt/phantom/bin/ &&  \
-    /opt/casperjs/bin/casperjs \
-    ~/Documents/myProjects/scripting/logic/casper/look.js | tee response.temp"
-    os.system(command)
-    
     return render_template('index.html')
+
+@app.route('/traceroute/', methods = ['GET','POST'])
+def traceroute():
+    data = request.form
+    #extracting the parameters
+    address= data["ip"]
+    phantom = "export PATH=$PATH:/opt/phantom/bin/ && "
+    casper = "/opt/casperjs/bin/casperjs "
+    script = "~/Documents/myProjects/scripting/logic/casper/global-crossing.js "
+    arguments = "--addr="+address
+    pipe = " | tee "+address+".temp"
+    command = phantom + casper + script + arguments + pipe 
+    os.system(command)
+    #reading the answer
+    response = open(address+".temp", "r+").read()    
+    return render_template('index.html', response=response)
 
 #Start the app
 if __name__=="__main__":
