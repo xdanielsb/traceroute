@@ -1,0 +1,55 @@
+[36m[info][0m [phantom] Starting...
+[36m[info][0m [phantom] Running suite: 3 steps
+[32;1m[debug][0m [phantom] opening url: http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace, HTTP GET
+[32;1m[debug][0m [phantom] Navigation requested: url=http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace, type=Other, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] url changed to "http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace"
+[32;1m[debug][0m [phantom] Successfully injected Casper client-side utilities
+[36m[info][0m [phantom] Step anonymous 2/3 http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace (HTTP 200)
+[32;1m[debug][0m [phantom] Capturing page to /home/daniel/Documents/myProjects/scripting/configuration/main.png
+[36m[info][0m [phantom] Capture saved to /home/daniel/Documents/myProjects/scripting/configuration/main.png
+[36m[info][0m [phantom] Step anonymous 2/3: done in 25131ms.
+[32;1m[debug][0m [phantom] Navigation requested: url=http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi, type=FormSubmitted, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] url changed to "http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi"
+[32;1m[debug][0m [phantom] Successfully injected Casper client-side utilities
+[36m[info][0m [phantom] Step anonymous 3/3 http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi (HTTP 200)
+[32;1m[debug][0m [phantom] Capturing page to /home/daniel/Documents/myProjects/scripting/configuration/content.png
+[36m[info][0m [phantom] Capture saved to /home/daniel/Documents/myProjects/scripting/configuration/content.png
+traceroute
+Protocol [ip]: ip
+Target IP address: 216.58.192.68
+Source address: 
+Numeric display [n]: n
+Timeout in seconds [3]: 1
+Probe count [3]: 2
+Minimum Time to Live [1]: 1
+Maximum Time to Live [30]: 30
+Port Number [33434]: 
+Loose, Strict, Record, Timestamp, Verbose[none]: 
+Type escape sequence to abort.
+Tracing the route to mia07s34-in-f4.1e100.net (216.58.192.68)
+VRF info: (vrf in name/id, vrf out name/id)
+  1 ae1.ar9.AMS2.gblx.net (67.16.130.182) 0 msec
+    ae0.ar9.AMS2.gblx.net (67.16.146.126) 4 msec
+  2 4.68.110.197 36 msec 0 msec
+  3 ae-225-3601.edge5.Amsterdam1.Level3.net (4.69.162.146) [AS 3356] 0 msec
+    ae-117-3503.edge5.Amsterdam1.Level3.net (4.69.162.138) [AS 3356] 0 msec
+  4 72.14.203.124 [AS 15169] 0 msec 0 msec
+  5 108.170.241.131 [AS 15169] 4 msec
+    108.170.241.194 [AS 15169] 48 msec
+  6 209.85.255.41 [AS 15169] [MPLS: Label 419309 Exp 4] 0 msec
+    209.85.241.21 [AS 15169] [MPLS: Label 24699 Exp 4] 0 msec
+  7 216.239.48.239 [AS 15169] [MPLS: Label 25937 Exp 4] 8 msec
+    216.239.48.159 [AS 15169] [MPLS: Label 476819 Exp 4] 8 msec
+  8 216.239.42.223 [AS 15169] [MPLS: Label 31606 Exp 4] 84 msec
+    216.239.42.77 [AS 15169] [MPLS: Label 641178 Exp 4] 104 msec
+  9 74.125.37.170 [AS 15169] [MPLS: Label 29294 Exp 4] 92 msec
+    209.85.243.116 [AS 15169] [MPLS: Label 732627 Exp 4] 108 msec
+ 10 74.125.37.193 [AS 15169] 108 msec
+    72.14.239.171 [AS 15169] 108 msec
+ 11 72.14.233.89 [AS 15169] 116 msec 108 msec
+ 12 mia07s34-in-f4.1e100.net (216.58.192.68) [AS 15169] 112 msec 108 msec
+
+[36m[info][0m [phantom] Step anonymous 3/3: done in 60210ms.
+[36m[info][0m [phantom] Done 3 steps in 60210ms
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] url changed to "about:blank"
