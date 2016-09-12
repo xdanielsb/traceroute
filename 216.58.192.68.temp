@@ -1,3 +1,0 @@
-[37;41;1mPage Error: TypeError: undefined is not an object (evaluating 'document.getElementsByTagName('option')[pos].selected = 'selected'')[0m
-[37;41;1mPage Error: TypeError: null is not an object (evaluating 'document.querySelector("pre").textContent')[0m
-null
