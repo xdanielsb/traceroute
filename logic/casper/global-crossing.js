@@ -1,31 +1,50 @@
-//Inital configuration for casper js
+/**
+ *Daniel Santos
+ *september, 2016
+ */
+
+/*
+ * Inital configuration 
+ */
 var casper = require('casper').create({
     pageSettings: {
-        loadImages:  false,        // The WebPage instance used by Casper will
-        loadPlugins: false         // use these settings
+        loadImages:  false,        
+        loadPlugins: false         
     },
   //  logLevel: "debug",              // Only "info" level messages will be logged
   //  verbose: true                  // log messages will be printed out to the console
 });
+
+/*
+ * Necesary variables
+ */
 var utils = require('utils');
 var ip = casper.cli.get('addr');
 var router = casper.cli.get('router');
 
-
-//Initial parameters for casper js
+/*
+ * URL for extrac information
+ */
 var url = 'http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace';
 
-// print out all the messages in the headless browser context
+/*
+ *print out all the messages in the headless browser context
+ */
 casper.on('remote.message', function(msg) {
     this.echo('remote message caught: ' + msg);
 });
 
-// print out all the messages in the headless browser context
+/*
+ *print out all the messages in the headless browser context
+ */
 casper.on("page.error", function(msg, trace) {
     this.echo("Page Error: " + msg, "ERROR");
 });
 
-// Start casper js
+
+/*
+ * Start casper js
+ */
 casper.start(url, function() {
     this.evaluate(function evaluateStuffAfterStart(ip, router) {
 
@@ -50,6 +69,9 @@ casper.start(url, function() {
      casper.capture('main.png');   
 });
 
+/*
+ * Execute some code after load the page
+ */
 casper.then(function() {
     casper.capture('content.png');
     var info = this.evaluate(function evaluateStuffAfterStart() {
