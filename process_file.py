@@ -1,7 +1,7 @@
 from __future__ import print_function
 import re
 
-url_file = "./200.69.103.254.temp"
+url_file = "./response.temp"
 file_data = open(url_file, "r+")
 
 #regular expressions
