@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="[An example of getting started with Cytoscape.js]" />
+  <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+  <meta charset=utf-8 />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+  <title>Cytoscape.js initialisation</title>
+
+  <script src="{{url_for('static',filename='js/cytoscape.min.js')}}"></script>
+  <script >
+  
+  document.addEventListener('DOMContentLoaded', function(){ // on dom ready
+
+var cy = cytoscape({
+  container: document.querySelector('#cy'),
+    
+  boxSelectionEnabled: false,
+  autounselectify: true,
+  
+  style: cytoscape.stylesheet()
+    .selector('node')
+      .css({
+        'content': 'data(name)',
+        'text-valign': 'center',
+        'color': 'white',
+        'text-outline-width': 2,
+        'background-color': '#999',
+        'text-outline-color': '#999'
+      })
+    .selector('edge')
+      .css({
+        'curve-style': 'bezier',
+        'target-arrow-shape': 'triangle',
+        'target-arrow-color': '#ccc',
+        'line-color': '#ccc',
+        'width': 1
+      })
+    .selector(':selected')
+      .css({
+        'background-color': 'black',
+        'line-color': 'black',
+        'target-arrow-color': 'black',
+        'source-arrow-color': 'black'
+      })
+    .selector('.faded')
+      .css({
+        'opacity': 0.25,
+        'text-opacity': 0
+      }),
+  
+  elements: {
+    nodes: [
+    {% if route %}
+      {%for i in route %}
+          { data: { id: '{{i}}', name: '{{i}}' } }, 
+     {%endfor%}
+    {% endif %}
+
+     { data: { id: 'g', name: 'End } }
+
+    ],
+    edges: [
+
+    {% if route %}
+      {%for i in route %}
+
+       { data: { source: '{{i}}', target: '{{i+1}}' } },
+     {%endfor%}
+    {% endif %}
+    { data: { source: 'g', target: 'j' } }
+
+
+    ]
+  },
+  
+  layout: {
+    name: 'grid',
+    padding: 10
+  }
+});
+
+cy.on('tap', 'node', function(e){
+  var node = e.cyTarget; 
+  var neighborhood = node.neighborhood().add(node);
+  
+  cy.elements().addClass('faded');
+  neighborhood.removeClass('faded');
+});
+
+cy.on('tap', function(e){
+  if( e.cyTarget === cy ){
+    cy.elements().removeClass('faded');
+  }
+});
+
+}); // on dom ready
+  
+  </script>
+</head>
+  
+<body>
+  <div id="cy"></div>
+</body>
+</html>
