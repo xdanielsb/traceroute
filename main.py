@@ -3,9 +3,10 @@
 """
 
 #Import the framework
+from __future__ import print_function
 from flask import Flask, render_template, request
 import os
-
+from process_file import get_parameters 
 
 #Create the app
 app = Flask(__name__)
@@ -15,6 +16,16 @@ app = Flask(__name__)
 def homepage():
     #request the program for doing the request
     return render_template('index.html')
+
+@app.route('/graph/')
+def graph():
+
+    targetip, ttlip, route = get_parameters()
+    print(targetip, ttlip, route )
+    num_links = len(route)
+
+    #request the program for doing the request
+    return render_template('graph2.html', targetip=targetip, ttlip= ttlip, route=route, num_links = num_links)
 
 @app.route('/traceroute/', methods = ['GET','POST'])
 def traceroute():

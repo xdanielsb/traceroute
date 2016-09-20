@@ -54,23 +54,22 @@ var cy = cytoscape({
     nodes: [
     {% if route %}
       {%for i in route %}
-          { data: { id: '{{i}}', name: '{{i}}' } }, 
+          { data: { id: '{{i}}', name: '{{route[i]}}' } }, 
      {%endfor%}
     {% endif %}
 
-     { data: { id: 'g', name: 'End } }
+     { data: { id: 'g', name: 'end' } }
 
     ],
     edges: [
 
     {% if route %}
       {%for i in route %}
-
        { data: { source: '{{i}}', target: '{{i+1}}' } },
      {%endfor%}
     {% endif %}
-    { data: { source: 'g', target: 'j' } }
 
+    { data: { source: 'g', target: 'j' } }
 
     ]
   },
@@ -79,6 +78,8 @@ var cy = cytoscape({
     name: 'grid',
     padding: 10
   }
+
+
 });
 
 cy.on('tap', 'node', function(e){
