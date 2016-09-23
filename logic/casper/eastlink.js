@@ -11,10 +11,12 @@ var casper = require('casper').create({
         loadImages:  false,        
         loadPlugins: false         
     },
-  //  logLevel: "debug",              // Only "info" level messages will be logged
-  //  verbose: true                  // log messages will be printed out to the console
+//    logLevel: "debug",              // Only "info" level messages will be logged
+//    verbose: true                  // log messages will be printed out to the console
 });
 
+
+var fs=require('fs');
 /*
  * Necesary variables
  */
@@ -25,7 +27,7 @@ var router = casper.cli.get('router');
 /*
  * URL for extrac information
  */
-var url = 'http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace';
+var url = 'http://lg.eastlink.ca/';
 
 /*
  *print out all the messages in the headless browser context
@@ -48,37 +50,29 @@ casper.on("page.error", function(msg, trace) {
 casper.start(url, function() {
     this.evaluate(function evaluateStuffAfterStart(ip, router) {
 
-        options = document.getElementsByTagName('option');
-        
-        //Select the source router
-        for(var i=0; i<options.length; i++){
-            if(options[i].value==router){
-                document.getElementsByTagName('option')[i].selected = 'selected';
-            }
-        }
-        
-        
-        //Select the input
-        input = document.getElementsByName("destAddress")[0] ;
-        //Change the address
-        input.value = ip;
-        //Submit the form
-        submit = document.getElementsByTagName("input")[3];
+        document.getElementsByTagName('option')[2].selected = 'selected';
+        document.getElementsByName("addr")[0].value = "216.58.192.68" ;
+        document.getElementsByTagName("input")[5].checked = true;
+        submit = document.getElementsByTagName("input")[7];
         submit.click();        
     }, ip, router);
-     casper.capture('main.png');  
+     //casper.capture('eas.png');  
 });
 
 /*
  * Execute some code after load the page
  */
 casper.then(function() {
-    casper.capture('content.png');
+    this.wait(2000, function() {
+      //  fs.write("result-east.html", this.getHTML() );
+    });
     var info = this.evaluate(function evaluateStuffAfterStart() {
         text= document.querySelector("pre").textContent;
         return text;
     });
     console.log(info);
+    
+   // console.log(this.getHTML())
 });
 
 

@@ -1,0 +1,34 @@
+
+Tracing the route to mia07s34-in-f4.1e100.net (216.58.192.68)
+
+  1 ns-hlfx-dr002.ns.eastlink.ca (24.222.79.149) 0 msec
+    ns-hlfx-dr001.ns.eastlink.ca (24.222.79.161) 0 msec
+    ns-hlfx-dr002.ns.eastlink.ca (24.222.79.149) 0 msec
+  2 ns-hlfx-br001.ns.eastlink.ca (24.215.101.221) 0 msec
+    ns-hlfx-br002.ns.eastlink.ca (24.215.102.221) 0 msec
+    ns-hlfx-br001.ns.eastlink.ca (24.215.101.221) 4 msec
+  3 ns-hlfx-br001.ns.eastlink.ca (24.215.102.9) 0 msec
+    google.eastlink.ca (24.215.101.10) 20 msec
+    ns-hlfx-br001.ns.eastlink.ca (24.215.102.9) 0 msec
+  4 216.239.47.114 [AS 15169] 20 msec
+    google.eastlink.ca (24.215.101.10) 20 msec
+    209.85.255.232 [AS 15169] 20 msec
+  5 209.85.255.232 [AS 15169] 20 msec
+    216.239.50.229 [AS 15169] [MPLS: Label 30461 Exp 4] 36 msec
+    216.239.47.114 [AS 15169] 20 msec
+  6 108.170.236.245 [AS 15169] [MPLS: Label 28435 Exp 4] 40 msec
+    216.239.50.229 [AS 15169] [MPLS: Label 30461 Exp 4] 36 msec
+    216.58.215.53 [AS 15169] [MPLS: Label 28704 Exp 4] 40 msec
+  7 108.170.236.245 [AS 15169] [MPLS: Label 28435 Exp 4] 40 msec
+    74.125.37.170 [AS 15169] [MPLS: Label 30241 Exp 4] 52 msec
+    108.170.236.245 [AS 15169] [MPLS: Label 28435 Exp 4] 40 msec
+  8 74.125.37.193 [AS 15169] 64 msec
+    74.125.37.170 [AS 15169] [MPLS: Label 29164 Exp 4] 52 msec
+    74.125.37.193 [AS 15169] 64 msec
+  9 74.125.37.193 [AS 15169] 64 msec
+    72.14.233.89 [AS 15169] 64 msec
+    74.125.37.193 [AS 15169] 64 msec
+ 10 mia07s34-in-f4.1e100.net (216.58.192.68) [AS 15169] 64 msec
+    72.14.233.89 [AS 15169] 64 msec
+    mia07s34-in-f4.1e100.net (216.58.192.68) [AS 15169] 64 msec
+

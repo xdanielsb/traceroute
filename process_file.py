@@ -2,9 +2,9 @@ from __future__ import print_function
 import re
 
 
-def get_parameters():
-    url_file = "./200.69.103.254.temp"
-    file_data = open(url_file, "r+")
+def get_parameters(file_data,url_file = "./216.58.222.197.temp"):
+    
+    #file_data = open(url_file, "r+")
 
     #regular expressions
     reTargetAddress = r'^Target IP address:(.+)'
@@ -56,4 +56,3 @@ def get_parameters():
 
 
 
-get_parameters()

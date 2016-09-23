@@ -5,14 +5,122 @@
     <title></title>
 </head>
 <body>
+    <center>
     <form action="/traceroute/" method="post">
 
+<!--
+ This options is managing easylink
+-->
+
+Options for the first server<br>
 <select name="source" size=1>
+
+<OPTION VALUE="Eastlink Atlantic (AS 11260)" SELECTED> Eastlink Atlantic (AS 11260)</option>
+<OPTION VALUE="Eastlink Eastern (AS 23184)"> Eastlink Eastern (AS 23184)</option>
+<OPTION VALUE="Eastlink Pacific (AS 22799)"> Eastlink Pacific (AS 22799)</option>
+<OPTION VALUE="Allstream (AS 15290)"> Allstream (AS 15290)</option>
+<OPTION VALUE="AT&amp;T (AS 7018)"> AT&amp;T (AS 7018)</option>
+<OPTION VALUE="Belwue (AS 553)"> Belwue (AS 553)</option>
+<OPTION VALUE="Comcast (AS 7922)"> Comcast (AS 7922)</option>
+<OPTION VALUE="Eunet (AS 6667)"> Eunet (AS 6667)</option>
+<OPTION VALUE="Exodus Communications (AS 3967)"> Exodus Communications (AS 3967)</option>
+<OPTION VALUE="Global Crossing (AS 3549)"> Global Crossing (AS 3549)</option>
+<OPTION VALUE="Global Crossing Europe (AS 3549)"> Global Crossing Europe (AS 3549)</option>
+<OPTION VALUE="Group Telecom - east (AS 6539)"> Group Telecom - east (AS 6539)</option>
+<OPTION VALUE="Host.net (AS 13645)"> Host.net (AS 13645)</option>
+<OPTION VALUE="Hurricane Electric (AS 6939)"> Hurricane Electric (AS 6939)</option>
+<OPTION VALUE="nLayer (AS 4436)"> nLayer (AS 4436)</option>
+<OPTION VALUE="Nodus Network"> Nodus Network</option>
+<OPTION VALUE="Opentransit (AS 5511)"> Opentransit (AS 5511)</option>
+<OPTION VALUE="Optus (AS 7474)"> Optus (AS 7474)</option>
+<OPTION VALUE="Oregon Exchange (AS 6447)"> Oregon Exchange (AS 6447)</option>
+<OPTION VALUE="Rogers (AS 812)"> Rogers (AS 812)</option>
+<OPTION VALUE="SAIX (AS 5713)"> SAIX (AS 5713)</option>
+<OPTION VALUE="Savvis (AS 3561)"> Savvis (AS 3561)</option>
+<OPTION VALUE="Sunrise (AS 6730)"> Sunrise (AS 6730)</option>
+<OPTION VALUE="Swisscom IP+ (AS 3303)"> Swisscom IP+ (AS 3303)</option>
+<OPTION VALUE="Switch (AS 23005)"> Switch (AS 23005)</option>
+<OPTION VALUE="TDC (AS 3292)"> TDC (AS 3292)</option>
+<OPTION VALUE="Time Warner (AS 4323)"> Time Warner (AS 4323)</option>
+<OPTION VALUE="TiNET (AS 3257)"> TiNET (AS 3257)</option>
+<OPTION VALUE="TELUS East (AS 852)"> TELUS East (AS 852)</option>
+<OPTION VALUE="TELUS West (AS 852)"> TELUS West (AS 852)</option>
+<OPTION VALUE="University of Washington (AS 6447)"> University of Washington (AS 6447)</option>
+<OPTION VALUE="Videotron (AS 5769)"> Videotron (AS 5769)</option>
+
+
+<OPTION VALUE="r20-Tln-TIX"> Data Telecom (AS 3327) *</option>
+<OPTION VALUE="ML Online (AS 5546)"> ML Online (AS 5546) *</option>
+<OPTION VALUE="kj-gw"> EsData (AS 2380) *</option>
+
+<OPTION VALUE="rtr1"> AMSIX *</option>
+<OPTION VALUE="INXS"> INXS peering LAN Munich *</option>
+<OPTION VALUE="LINX (UK)"> LINX (UK) *</option>
+<OPTION VALUE="LINX (Transit)"> LINX (Transit) *</option>
+<OPTION VALUE="LINX (Multicast)"> LINX (Multicast) *</option>
+<OPTION VALUE="zebra"> BLNX *</option>
+
+
+
+<OPTION VALUE="Amsterdam (NL), AMS-IX"> Amsterdam (NL), AMS-IX *</option>
+
+
+<OPTION VALUE="Amsterdam (NL), AMS-IX"> Amsterdam (NL), AMS-IX *</option>
+<OPTION VALUE="Copenhagen/Lyngby (DK), DIX #1"> Copenhagen/Lyngby (DK), DIX #1 *</option>
+<OPTION VALUE="Copenhagen/Virum (DK), DIX #2"> Copenhagen/Virum (DK), DIX #2 *</option>
+<OPTION VALUE="Frankfurt (DE), DE-CIX"> Frankfurt (DE), DE-CIX *</option>
+<OPTION VALUE="London (UK), LINX #1"> London (UK), LINX #1 *</option>
+<OPTION VALUE="London (UK), LINX #2"> London (UK), LINX #2 *</option>
+<OPTION VALUE="New York 1 (US)"> New York 1 (US) *</option>
+<OPTION VALUE="New York 2 (US)"> New York 2 (US) *</option>
+<OPTION VALUE="New York 3 (US)"> New York 3 (US) *</option>
+<OPTION VALUE="Oslo (NO), NIX1"> Oslo (NO), NIX1 *</option>
+<OPTION VALUE="Oslo (NO), NIX2"> Oslo (NO), NIX2 *</option>
+<OPTION VALUE="Stockholm (SE), Netnod"> Stockholm (SE), Netnod *</option>
+
+<OPTION VALUE="Amsterdam"> Amsterdam *</option>
+<OPTION VALUE="Antwerp"> Antwerp *</option>
+<OPTION VALUE="Berlin"> Berlin *</option>
+<OPTION VALUE="Brussels"> Brussels *</option>
+<OPTION VALUE="Dublin"> Dublin *</option>
+<OPTION VALUE="Frankfurt"> Frankfurt *</option>
+<OPTION VALUE="Leiden"> Leiden *</option>
+<OPTION VALUE="London"> London *</option>
+<OPTION VALUE="Munich"> Munich *</option>
+<OPTION VALUE="Rotterdam"> Rotterdam *</option>
+
+<OPTION VALUE="D-GIX (DPT)"> D-GIX (DPT) *</option>
+<OPTION VALUE="D-GIX (FDDI)"> D-GIX (FDDI) *</option>
+
+
+<OPTION VALUE="Level3 (AS 3356)"> Level3 (AS 3356) *</option>
+<OPTION VALUE="Davidov Electric (AS 12814)"> Davidov Electric (AS 12814) *</option>
+<OPTION VALUE="Tata Communications (AS6453)"> Tata Communications (AS6453) *</option>
+<OPTION VALUE="Bell Canada (AS577)"> Bell Canada (AS577) *</option>
+
+
+<OPTION VALUE="Data Telecom IPv6"> Data Telecom IPv6 *</option>
+<OPTION VALUE="6TAP"> 6TAP *</option>
+<OPTION VALUE="LavaNet"> LavaNet *</option>
+<OPTION VALUE="r1-gw.ipv6.itk.pl"> iTk *</option>
+<OPTION VALUE="EdisonTel IPv6"> EdisonTel IPv6 *</option>
+
+
+
+</SELECT>
+
+
+<!--
+    This option is using global crossing 
+-->
+
+<br>
+Options for the server global crossing <br>
+<select name="source2" size=1>
 <option value="Asia" disabled="disabled">Asia</option>
 <option value="119637" >Chai Wan, CHINA - CLK1</option>
 <option value="145522" >Chuo-ku, Tokyo, JAPAN - TYO1</option>
 <option value="145366" >Singapore, SINGAPORE - QPG1</option>
-
 <option value="Europe" disabled="disabled">Europe</option>
 <option value="146702" >Ultimo, AUSTRALIA - RSE1</option>
 <option value="149996" > Hamburg, GERMANY - HAM1</option>
@@ -40,7 +148,6 @@
 <option value="153980" >Solihull, UNITED KINGDOM - BHX1</option>
 <option value="145146" >Stockholm, SWEDEN - ARN3</option>
 <option value="150227" >Stuttgart, GERMANY - VDL1.STR</option>
-
 <option value="Latin America" disabled="disabled">Latin America</option>
 <option value="154487" >Vienna, AUSTRIA - VIE1</option>
 <option value="407018" >Bogota, COLUMBIA - CXV1.BOG</option>
@@ -49,8 +156,6 @@
 <option value="407165" >Quito, ECUADOR - TUI1.UIO</option>
 <option value="153622" >Santiago, CHILE - SCL1</option>
 <option value="154024" >Sao Cristavao, Rio de Janeiro, BRAZIL - GIG1</option>
-
-
 <option value="US" disabled="disabled">US</option>
 <option value="153562" >Sao Paulo, BRAZIL - GRU1</option>
 <option value="144523" >Anaheim, UNITED STATES - SNA1</option>
@@ -86,17 +191,24 @@
 <option value="146167" >Tampa, UNITED STATES - TPA1</option>
 <option value="144482" >Toronto, CANADA - YYZ1</option>
 <option value="135272" >Washington, UNITED STATES - WDC2</option>
-</select>
+</select></td><br>
 
-        ip:     <input type="text" name="ip"/><br>
-        origin: <input type="" name="origin"/> 
-        submit: <input type="submit">
+
+        ip:     <input type="text" placeholder="Destiny IP" name="ip"/><br>
+        origin: <input type="" placeholder="Change the origin instead of the servers" name="origin"/><br> 
+        <input type="submit"><br>
         
     </form>
+    </center>
     {%if response%}
-        <p>
-        {{response}}
-        </p>
+        <pre>
+        {{response|safe}}
+        </pre>
+
+        <form action="/traceroute/" method="post">
+            Show graph: <input type="text" name="namefile" value="{{namefile}}">
+            <input type="submit"><br>
+        </form>
     {%endif%}
 </body>
 </html>

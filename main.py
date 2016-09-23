@@ -33,18 +33,47 @@ def traceroute():
     #extracting the parameters
     address= data["ip"]
     source = data["source"]
-    phantom = "export PATH=$PATH:/opt/phantom/bin/ && "
+    
+    print(data)
+    phantom = "export PATH=$PATH:/opt/phantom/bin/ &&  "
     casper = "/opt/casperjs/bin/casperjs "
-    script = "~/Documents/myProjects/scripting/logic/casper/global-crossing.js "
+
+    script = "~/Documents/myProjects/scripting/logic/casper/eastlink.js "
     argumentip = "--addr="+address
-    argumentsource = " --source="+source
+    argumentsource = " --source='"+source+"'"
     pipe = " | tee "+address+".temp"
     command = phantom + casper + script + argumentip + argumentsource + pipe 
+    
+    
+    print (command)
     #execute the command
     os.system(command)
     #reading the answer
-    response = open(address+".temp", "r+").read()    
-    return render_template('index.html', response=response)
+    response = open(address+".temp", "r+").read() 
+#    response = response.replace("\n","<br>")
+    print("------------------------")
+    print(response)
+    namefile = address
+    
+    #return render_template('index.html', response=response)
+
+    #request the program for doing the request
+    return render_template('index.html',response=response,namefile=namefile)
+
+
+@app.route("/response/", methods = ['GET','POST'])
+def response():
+    data = request.form
+    #extracting the parameters
+    namefile = data["namefile"]
+    response = open(namefile+".temp", "r+") 
+    targetip, ttlip, route = get_parameters(response)
+    print(targetip, ttlip, route )
+    num_links = len(route)
+    print(data)
+
+    #request the program for doing the request
+    return render_template('graph2.html',  targetip=targetip, ttlip= ttlip, route=route, num_links = num_links )
 
 #Start the app
 if __name__=="__main__":
