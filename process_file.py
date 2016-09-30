@@ -2,10 +2,9 @@ from __future__ import print_function
 import re
 
 
-def get_parameters(file_data,url_file = "./216.58.222.197.temp"):
+def get_parameters(file_data):
     
-    #file_data = open(url_file, "r+")
-
+    
     #regular expressions
     reTargetAddress = r'^Target IP address:(.+)'
     reTtl = r'Maximum Time to Live .+:(.+)'
