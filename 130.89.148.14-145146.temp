@@ -1,0 +1,17 @@
+traceroute
+Protocol [ip]: ip
+Target IP address: 130.89.148.14
+Source address: 
+Numeric display [n]: n
+Timeout in seconds [3]: 1
+Probe count [3]: 2
+Minimum Time to Live [1]: 1
+Maximum Time to Live [30]: 30
+Port Number [33434]: 
+Loose, Strict, Record, Timestamp, Verbose[none]: 
+Type escape sequence to abort.
+Tracing the route to klecker4.snt.utwente.nl (130.89.148.14)
+VRF info: (vrf in name/id, vrf out name/id)
+  1 ae0.ar9.AMS2.gblx.net (67.16.146.126) 16 msec
+    ae1.ar9.AMS2.gblx.net (67.16.130.182) 20 msec
+  2 

@@ -37,24 +37,29 @@ def traceroute():
     source2 = data["source2"]
     
     print(data)
-    phantom = "export PATH=$PATH:/opt/phantom/bin/ &&  "
-    casper = "/opt/casperjs/bin/casperjs "
+    phantom = "export PATH=$PATH:/home/laboratorio/Documentos/traceroute/engines/phantom/bin/ &&  "
+    casper = "/home/laboratorio/Documentos/traceroute/engines/casperjs/bin/casperjs "
     
     if source=="" and source2 =="":
         print("1-----------")
         return render_template('index.html',response="It is necesary choose a destiny",namefile="")
     elif source2 != "":
         print("2-----------")
-        script = "~/Documents/myProjects/scripting/logic/casper/global-crossing.js "
+        script = "/home/laboratorio/Documentos/traceroute/logic/casper/global-crossing.js "
         argumentsource = " --source="+source2
     else:
         print("3-----------")
-        script = "~/Documents/myProjects/scripting/logic/casper/eastlink.js "
+        script = "/home/laboratorio/Documentos/traceroute/logic/casper/eastlink.js "
         argumentsource = " --source='"+source+"'"
     
+    namefile = address+"-"+argumentsource[10:]
+    namefile = namefile.replace("'","")
+    namefile = namefile.replace(" ","")
+    namefile = namefile.replace("(","")
+    namefile = namefile.replace(")","")
     argumentip = "--addr="+address
     
-    pipe = " | tee "+address+"-"+argumentsource[10:]+".temp"
+    pipe = " | tee "+namefile+".temp"
     command = phantom + casper + script + argumentip + argumentsource + pipe 
     
 
@@ -62,17 +67,16 @@ def traceroute():
     #execute the command
     
 
-    if (os.path.isfile("./"+address+"-"+argumentsource[10:]+".temp")):
+    if (os.path.isfile("./"+namefile+".temp")):
         pass
     else:
         os.system(command)
     #reading the answer
-    n = "./"+address+"-"+argumentsource[10:]+".temp"
+    n = "./"+namefile+".temp"
     response = open(n, "r+").read() 
     print(n)
     print(response)
-    namefile = address+"-"+argumentsource[10:]
-    namefile = namefile.replace("'","")
+    
     
     #return render_template('index.html', response=response)
 
@@ -97,7 +101,7 @@ def response():
 
 @app.route('/<path:filename>')  
 def send_file(filename):  
-    return send_from_directory("/home/daniel/Documents/myProjects/scripting/", filename+".temp")
+    return send_from_directory("/home/laboratorio/Documentos/traceroute/", filename+".temp")
 
 
 #Start the app
