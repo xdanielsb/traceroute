@@ -35,21 +35,28 @@ def traceroute():
     address= data["ip"]
     source = data["source"]
     source2 = data["source2"]
-    
+    is_university = False
+    if is_university:
+        path = "/home/laboratorio/Documentos/traceroute/"
+    else:
+        path = "~/Documents/myProjects/scripting/"
     print(data)
-    phantom = "export PATH=$PATH:/home/laboratorio/Documentos/traceroute/engines/phantom/bin/ &&  "
-    casper = "/home/laboratorio/Documentos/traceroute/engines/casperjs/bin/casperjs "
+    phantom = "export PATH=$PATH:"+path+"engines/phantom/bin/"
+    os.system(phantom)
+    print(phantom)
+    
+    casper = path+"engines/casperjs/bin/casperjs "
     
     if source=="" and source2 =="":
         print("1-----------")
         return render_template('index.html',response="It is necesary choose a destiny",namefile="")
     elif source2 != "":
         print("2-----------")
-        script = "/home/laboratorio/Documentos/traceroute/logic/casper/global-crossing.js "
+        script = path+"logic/casper/global-crossing.js "
         argumentsource = " --source="+source2
     else:
         print("3-----------")
-        script = "/home/laboratorio/Documentos/traceroute/logic/casper/eastlink.js "
+        script = path+"logic/casper/eastlink.js "
         argumentsource = " --source='"+source+"'"
     
     namefile = address+"-"+argumentsource[10:]
@@ -60,7 +67,7 @@ def traceroute():
     argumentip = "--addr="+address
     
     pipe = " | tee "+namefile+".temp"
-    command = phantom + casper + script + argumentip + argumentsource + pipe 
+    command =  casper + script + argumentip + argumentsource + pipe 
     
 
     #print (command)
@@ -74,6 +81,7 @@ def traceroute():
     #reading the answer
     n = "./"+namefile+".temp"
     response = open(n, "r+").read() 
+    print(command)
     print(n)
     print(response)
     
@@ -101,7 +109,7 @@ def response():
 
 @app.route('/<path:filename>')  
 def send_file(filename):  
-    return send_from_directory("/home/laboratorio/Documentos/traceroute/", filename+".temp")
+    return send_from_directory("~/Documents/myProjects/scripting/", filename+".temp")
 
 
 #Start the app
