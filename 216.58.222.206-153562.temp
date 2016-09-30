@@ -1,0 +1,27 @@
+traceroute
+Protocol [ip]: ip
+Target IP address: 216.58.222.206
+Source address: 
+Numeric display [n]: n
+Timeout in seconds [3]: 1
+Probe count [3]: 2
+Minimum Time to Live [1]: 1
+Maximum Time to Live [30]: 30
+Port Number [33434]: 
+Loose, Strict, Record, Timestamp, Verbose[none]: 
+Type escape sequence to abort.
+Tracing the route to bog02s05-in-f206.1e100.net (216.58.222.206)
+VRF info: (vrf in name/id, vrf out name/id)
+  1 ae1-160G.ar4.GRU1.gblx.net (67.16.148.10) 4 msec 0 msec
+  2 72.14.212.213 0 msec 0 msec
+  3 209.85.250.147 [AS 15169] 0 msec 4 msec
+  4 209.85.245.51 [AS 15169] [MPLS: Label 564261 Exp 4] 12 msec
+    209.85.245.53 [AS 15169] [MPLS: Label 666700 Exp 4] 20 msec
+  5 72.14.235.28 [AS 15169] 112 msec
+    209.85.244.62 [AS 15169] 240 msec
+  6 216.239.42.80 [AS 15169] [MPLS: Label 549307 Exp 4] 140 msec
+    216.239.42.0 [AS 15169] [MPLS: Label 675238 Exp 4] 132 msec
+  7 209.85.252.108 [AS 15169] 180 msec 180 msec
+  8 72.14.238.123 [AS 15169] 132 msec 132 msec
+  9 bog02s05-in-f206.1e100.net (216.58.222.206) [AS 15169] 136 msec 136 msec
+

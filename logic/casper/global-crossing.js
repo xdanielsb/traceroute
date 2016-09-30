@@ -11,8 +11,8 @@ var casper = require('casper').create({
         loadImages:  false,        
         loadPlugins: false         
     },
-    logLevel: "debug",              // Only "info" level messages will be logged
-    verbose: true                  // log messages will be printed out to the console
+  //  logLevel: "debug",              // Only "info" level messages will be logged
+   // verbose: true                  // log messages will be printed out to the console
 });
 
 /*
@@ -65,14 +65,14 @@ casper.start(url, function() {
         submit = document.getElementsByTagName("input")[3];
         submit.click();        
     }, ip, router);
-     casper.capture('main.png');  
+   //  casper.capture('main.png');  
 });
 
 /*
  * Execute some code after load the page
  */
 casper.then(function() {
-    casper.capture('content.png');
+ //   casper.capture('content.png');
     var info = this.evaluate(function evaluateStuffAfterStart() {
         text= document.querySelector("pre").textContent;
         return text;

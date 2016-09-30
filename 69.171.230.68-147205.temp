@@ -1,0 +1,33 @@
+traceroute
+Protocol [ip]: ip
+Target IP address: 69.171.230.68
+Source address: 
+Numeric display [n]: n
+Timeout in seconds [3]: 1
+Probe count [3]: 2
+Minimum Time to Live [1]: 1
+Maximum Time to Live [30]: 30
+Port Number [33434]: 
+Loose, Strict, Record, Timestamp, Verbose[none]: 
+Type escape sequence to abort.
+Tracing the route to edge-star-mini-shv-17-prn1.facebook.com (69.171.230.68)
+VRF info: (vrf in name/id, vrf out name/id)
+  1 po3.ar4.LON3.gblx.net (67.17.111.141) 12 msec 12 msec
+  2 4.68.110.157 12 msec 12 msec
+  3 ae-1-9.edge2.SanJose3.Level3.net (4.69.209.181) [AS 3356] 148 msec 148 msec
+  4 4.53.210.78 [AS 3356] 148 msec 148 msec
+  5 po131.asw01.sjc1.tfbnw.net (157.240.32.28) [AS 32934] 148 msec
+    po131.asw02.sjc1.tfbnw.net (157.240.32.30) [AS 32934] 148 msec
+  6 ae0.ar02.sjc1.tfbnw.net (74.119.79.140) [AS 32934] 148 msec
+    ae4.ar03.sjc1.tfbnw.net (157.240.32.4) [AS 32934] 148 msec
+  7 ae31.bb04.sjc1.tfbnw.net (74.119.79.198) [AS 32934] [MPLS: Label 456680 Exp 2] 172 msec 180 msec
+  8 be22.bb01.prn2.tfbnw.net (31.13.25.196) [AS 32934] [MPLS: Label 26284 Exp 2] 172 msec
+    be26.bb01.prn2.tfbnw.net (31.13.24.244) [AS 32934] [MPLS: Label 27759 Exp 2] 172 msec
+  9 ae41.dr01.prn2.tfbnw.net (31.13.25.59) [AS 32934] 156 msec
+    ae43.dr08.prn2.tfbnw.net (31.13.31.127) [AS 32934] 160 msec
+ 10  *  * 
+ 11  *  * 
+ 12  *  * 
+ 13  *  * 
+ 14 edge-star-mini-shv-17-prn1.facebook.com (69.171.230.68) [AS 32934] 156 msec 160 msec
+

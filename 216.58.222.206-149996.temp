@@ -1,0 +1,38 @@
+traceroute
+Protocol [ip]: ip
+Target IP address: 216.58.222.206
+Source address: 
+Numeric display [n]: n
+Timeout in seconds [3]: 1
+Probe count [3]: 2
+Minimum Time to Live [1]: 1
+Maximum Time to Live [30]: 30
+Port Number [33434]: 
+Loose, Strict, Record, Timestamp, Verbose[none]: 
+Type escape sequence to abort.
+Tracing the route to bog02s05-in-f14.1e100.net (216.58.222.206)
+VRF info: (vrf in name/id, vrf out name/id)
+  1 ae1.ar9.AMS2.gblx.net (67.16.130.182) 4 msec
+    ae0.ar9.AMS2.gblx.net (67.16.146.126) 4 msec
+  2 4.68.110.197 4 msec 4 msec
+  3 ae-115-3501.edge5.Amsterdam1.Level3.net (4.69.162.130) [AS 3356] 8 msec 4 msec
+  4 72.14.203.124 [AS 15169] 8 msec 4 msec
+  5 108.170.241.130 [AS 15169] 8 msec
+    108.170.241.195 [AS 15169] 4 msec
+  6 209.85.241.127 [AS 15169] [MPLS: Label 26129 Exp 4] 4 msec
+    209.85.240.231 [AS 15169] [MPLS: Label 675469 Exp 4] 4 msec
+  7 209.85.251.13 [AS 15169] [MPLS: Label 689436 Exp 4] 16 msec
+    216.239.51.101 [AS 15169] [MPLS: Label 704972 Exp 4] 12 msec
+  8 209.85.254.245 [AS 15169] [MPLS: Label 613652 Exp 4] 88 msec
+    216.239.42.223 [AS 15169] [MPLS: Label 35363 Exp 4] 88 msec
+  9 74.125.37.172 [AS 15169] [MPLS: Label 32985 Exp 4] 96 msec
+    209.85.249.234 [AS 15169] [MPLS: Label 529011 Exp 4] 96 msec
+ 10 74.125.37.193 [AS 15169] 112 msec
+    72.14.239.173 [AS 15169] 124 msec
+ 11 216.239.42.0 [AS 15169] [MPLS: Label 677670 Exp 4] 148 msec
+    216.239.42.80 [AS 15169] [MPLS: Label 558379 Exp 4] 152 msec
+ 12 64.233.175.234 [AS 15169] 200 msec
+    209.85.252.108 [AS 15169] 196 msec
+ 13 72.14.238.123 [AS 15169] 152 msec 148 msec
+ 14 bog02s05-in-f14.1e100.net (216.58.222.206) [AS 15169] 148 msec 148 msec
+

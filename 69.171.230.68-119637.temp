@@ -1,0 +1,44 @@
+traceroute
+Protocol [ip]: ip
+Target IP address: 69.171.230.68
+Source address: 
+Numeric display [n]: n
+Timeout in seconds [3]: 1
+Probe count [3]: 2
+Minimum Time to Live [1]: 1
+Maximum Time to Live [30]: 30
+Port Number [33434]: 
+Loose, Strict, Record, Timestamp, Verbose[none]: 
+Type escape sequence to abort.
+Tracing the route to edge-star-mini-shv-17-prn1.facebook.com (69.171.230.68)
+VRF info: (vrf in name/id, vrf out name/id)
+  1 ae2-20G.ar2.CLK1.gblx.net (67.16.179.18) 4 msec
+    ae1-20G.ar2.CLK1.gblx.net (67.16.179.14) 0 msec
+  2 po20.br01.hkg15.pccwbtn.net (63.216.142.121) 156 msec 156 msec
+  3 63-218-205-86.static.pccwglobal.net (63.218.205.86) [AS 3491] 132 msec 132 msec
+  4 63-218-205-86.static.pccwglobal.net (63.218.205.86) [AS 3491] 132 msec 136 msec
+  5 ae-16.r30.tokyjp05.jp.bb.gin.ntt.net (129.250.5.133) [AS 2914] [MPLS: Labels 352208/299776 Exp 0] 136 msec
+    ae-3.r22.tkokhk01.hk.bb.gin.ntt.net (129.250.6.232) [AS 2914] [MPLS: Label 579522 Exp 0] 136 msec
+  6 ae-4.r20.sttlwa01.us.bb.gin.ntt.net (129.250.2.39) [AS 2914] [MPLS: Label 299776 Exp 0] 152 msec
+    ae-4.r23.snjsca04.us.bb.gin.ntt.net (129.250.5.78) [AS 2914] [MPLS: Label 299776 Exp 0] 156 msec
+  7 ae-41.r02.snjsca04.us.bb.gin.ntt.net (129.250.6.119) [AS 2914] 156 msec
+    ae-45.r01.snjsca04.us.bb.gin.ntt.net (129.250.3.175) [AS 2914] 160 msec
+  8 ae-3.facebook.snjsca04.us.bb.gin.ntt.net (129.250.207.114) [AS 2914] 156 msec
+    ae-0.facebook.snjsca04.us.bb.gin.ntt.net (128.241.219.30) [AS 2914] 156 msec
+  9 be3.bb01.sea1.tfbnw.net (74.119.79.26) [AS 32934] [MPLS: Label 24340 Exp 2] 268 msec
+    ae-3.facebook.snjsca04.us.bb.gin.ntt.net (129.250.207.114) [AS 2914] 156 msec
+ 10 po111.asw03.sjc1.tfbnw.net (31.13.25.82) [AS 32934] 156 msec
+    po111.asw01.sjc1.tfbnw.net (31.13.25.30) [AS 32934] 160 msec
+ 11 ae0.dr11.prn1.tfbnw.net (31.13.25.163) [AS 32934] 160 msec
+    ae31.bb04.sjc1.tfbnw.net (74.119.79.198) [AS 32934] [MPLS: Label 428328 Exp 2] 284 msec
+ 12 ae32.bb03.prn2.tfbnw.net (31.13.30.104) [AS 32934] [MPLS: Label 697263 Exp 2] 288 msec
+    ae43.dr01.prn2.tfbnw.net (31.13.31.119) [AS 32934] 156 msec
+ 13  * 
+    ae32.bb03.prn2.tfbnw.net (31.13.30.104) [AS 32934] [MPLS: Label 670671 Exp 2] 280 msec
+ 14 ae0.dr13.prn1.tfbnw.net (31.13.27.141) [AS 32934] 152 msec 164 msec
+ 15  *  * 
+ 16  *  * 
+ 17  *  * 
+ 18  *  * 
+ 19 edge-star-mini-shv-17-prn1.facebook.com (69.171.230.68) [AS 32934] 152 msec 160 msec
+

@@ -4,13 +4,13 @@
 
 #Import the framework
 from __future__ import print_function
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 import os
 import os.path
 from process_file import get_parameters 
 
 #Create the app
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 #Add a wrapper for the home page
 @app.route('/')
@@ -58,7 +58,7 @@ def traceroute():
     command = phantom + casper + script + argumentip + argumentsource + pipe 
     
 
-    print (command)
+    #print (command)
     #execute the command
     
 
@@ -67,11 +67,12 @@ def traceroute():
     else:
         os.system(command)
     #reading the answer
-    response = open(address+"-"+argumentsource[10:]+".temp", "r+").read() 
-#    response = response.replace("\n","<br>")
-    print("------------------------")
+    n = "./"+address+"-"+argumentsource[10:]+".temp"
+    response = open(n, "r+").read() 
+    print(n)
     print(response)
     namefile = address+"-"+argumentsource[10:]
+    namefile = namefile.replace("'","")
     
     #return render_template('index.html', response=response)
 
@@ -92,6 +93,12 @@ def response():
 
     #request the program for doing the request
     return render_template('graph2.html',  targetip=targetip, ttlip= ttlip, route=route, num_links = num_links )
+
+
+@app.route('/<path:filename>')  
+def send_file(filename):  
+    return send_from_directory("/home/daniel/Documents/myProjects/scripting/", filename+".temp")
+
 
 #Start the app
 if __name__=="__main__":
