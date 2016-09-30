@@ -6,6 +6,7 @@
 from __future__ import print_function
 from flask import Flask, render_template, request
 import os
+import os.path
 from process_file import get_parameters 
 
 #Create the app
@@ -33,27 +34,44 @@ def traceroute():
     #extracting the parameters
     address= data["ip"]
     source = data["source"]
+    source2 = data["source2"]
     
     print(data)
     phantom = "export PATH=$PATH:/opt/phantom/bin/ &&  "
     casper = "/opt/casperjs/bin/casperjs "
-
-    script = "~/Documents/myProjects/scripting/logic/casper/eastlink.js "
+    
+    if source=="" and source2 =="":
+        print("1-----------")
+        return render_template('index.html',response="It is necesary choose a destiny",namefile="")
+    elif source2 != "":
+        print("2-----------")
+        script = "~/Documents/myProjects/scripting/logic/casper/global-crossing.js "
+        argumentsource = " --source="+source2
+    else:
+        print("3-----------")
+        script = "~/Documents/myProjects/scripting/logic/casper/eastlink.js "
+        argumentsource = " --source='"+source+"'"
+    
     argumentip = "--addr="+address
-    argumentsource = " --source='"+source+"'"
-    pipe = " | tee "+address+".temp"
+    
+    pipe = " | tee "+address+"-"+argumentsource[10:]+".temp"
     command = phantom + casper + script + argumentip + argumentsource + pipe 
     
-    
+
     print (command)
     #execute the command
-    os.system(command)
+    
+
+    if (os.path.isfile("./"+address+"-"+argumentsource[10:]+".temp")):
+        pass
+    else:
+        os.system(command)
     #reading the answer
-    response = open(address+".temp", "r+").read() 
+    response = open(address+"-"+argumentsource[10:]+".temp", "r+").read() 
 #    response = response.replace("\n","<br>")
     print("------------------------")
     print(response)
-    namefile = address
+    namefile = address+"-"+argumentsource[10:]
     
     #return render_template('index.html', response=response)
 

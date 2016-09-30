@@ -48,10 +48,11 @@ casper.on("page.error", function(msg, trace) {
  * Start casper js
  */
 casper.start(url, function() {
+    console.log(ip);
     this.evaluate(function evaluateStuffAfterStart(ip, router) {
 
         document.getElementsByTagName('option')[2].selected = 'selected';
-        document.getElementsByName("addr")[0].value = "216.58.192.68" ;
+        document.getElementsByName("addr")[0].value = ip;
         document.getElementsByTagName("input")[5].checked = true;
         submit = document.getElementsByTagName("input")[7];
         submit.click();        

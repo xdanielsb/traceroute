@@ -1,0 +1,58 @@
+[36m[info][0m [phantom] Starting...
+[36m[info][0m [phantom] Running suite: 3 steps
+[32;1m[debug][0m [phantom] opening url: http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace, HTTP GET
+[32;1m[debug][0m [phantom] Navigation requested: url=http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace, type=Other, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] url changed to "http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace"
+[32;1m[debug][0m [phantom] Successfully injected Casper client-side utilities
+[36m[info][0m [phantom] Step anonymous 2/3 http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi?lgCall=r2htrace (HTTP 200)
+[32;1m[debug][0m [phantom] Capturing page to /home/daniel/Documents/myProjects/scripting/main.png
+[36m[info][0m [phantom] Capture saved to /home/daniel/Documents/myProjects/scripting/main.png
+[36m[info][0m [phantom] Step anonymous 2/3: done in 7952ms.
+[32;1m[debug][0m [phantom] Navigation requested: url=http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi, type=FormSubmitted, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] url changed to "http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi"
+[32;1m[debug][0m [phantom] Successfully injected Casper client-side utilities
+[36m[info][0m [phantom] Step anonymous 3/3 http://ipstats.globalcrossing.net/cgi-bin/lg/lg.cgi (HTTP 200)
+[32;1m[debug][0m [phantom] Capturing page to /home/daniel/Documents/myProjects/scripting/content.png
+[36m[info][0m [phantom] Capture saved to /home/daniel/Documents/myProjects/scripting/content.png
+traceroute
+Protocol [ip]: ip
+Target IP address: 98.139.183.24
+Source address: 
+Numeric display [n]: n
+Timeout in seconds [3]: 1
+Probe count [3]: 2
+Minimum Time to Live [1]: 1
+Maximum Time to Live [30]: 30
+Port Number [33434]: 
+Loose, Strict, Record, Timestamp, Verbose[none]: 
+Type escape sequence to abort.
+Tracing the route to ir2.fp.vip.bf1.yahoo.com (98.139.183.24)
+VRF info: (vrf in name/id, vrf out name/id)
+  1 ae6-90G.ar2.NYC1.gblx.net (67.16.159.37) 16 msec
+    ae4-90G.ar2.NYC1.gblx.net (64.215.102.181) 20 msec
+  2 64.215.30.22 28 msec 28 msec
+  3 et-19-0-0.pat1.bfz.yahoo.com (216.115.97.103) [AS 10310] 28 msec 28 msec
+  4 et-0-0-0.msr2.bf1.yahoo.com (74.6.227.137) [AS 10310] 28 msec
+    et-0-0-1.msr2.bf1.yahoo.com (74.6.227.139) [AS 10310] 28 msec
+  5 UNKNOWN-74-6-122-X.yahoo.com (74.6.122.89) [AS 26101] 28 msec
+    et-19-0-1.clr2-a-gdc.bf1.yahoo.com (74.6.122.39) [AS 26101] 28 msec
+  6 po7.fab5-1-gdc.bf1.yahoo.com (72.30.22.9) [AS 26101] 28 msec
+    po8.fab6-1-gdc.bf1.yahoo.com (72.30.22.43) [AS 26101] 28 msec
+  7 po-15.bas2-7-prd.bf1.yahoo.com (98.139.129.243) [AS 26101] 28 msec
+    po-12.bas1-7-prd.bf1.yahoo.com (98.139.129.193) [AS 26101] 28 msec
+  8  *  * 
+  9  *  * 
+ 10  *  * 
+ 11  *  * 
+ 12  *  * 
+ 13  *  * 
+ 14  *  * 
+ 15  *  * 
+ 16  *  * 
+ 17  *  * 
+ 18  *  * 
+ 19  *  * 
+[36m[info][0m [phantom] Step anonymous 3/3: done in 90405ms.
+[36m[info][0m [phantom] Done 3 steps in 90405ms
+[32;1m[debug][0m [phantom] Navigation requested: url=about:blank, type=Other, willNavigate=true, isMainFrame=true
+[32;1m[debug][0m [phantom] url changed to "about:blank"

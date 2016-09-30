@@ -12,10 +12,10 @@
  This options is managing easylink
 -->
 
-Options for the first server<br>
-<select name="source" size=1>
 
-<OPTION VALUE="Eastlink Atlantic (AS 11260)" SELECTED> Eastlink Atlantic (AS 11260)</option>
+<select name="source" size=1>
+<OPTION VALUE="" SELECTED> Options for east link</option>
+<OPTION VALUE="Eastlink Atlantic (AS 11260)" > Eastlink Atlantic (AS 11260)</option>
 <OPTION VALUE="Eastlink Eastern (AS 23184)"> Eastlink Eastern (AS 23184)</option>
 <OPTION VALUE="Eastlink Pacific (AS 22799)"> Eastlink Pacific (AS 22799)</option>
 <OPTION VALUE="Allstream (AS 15290)"> Allstream (AS 15290)</option>
@@ -115,8 +115,9 @@ Options for the first server<br>
 -->
 
 <br>
-Options for the server global crossing <br>
+ <br>
 <select name="source2" size=1>
+<option value="">Options for the server global crossing</option>
 <option value="Asia" disabled="disabled">Asia</option>
 <option value="119637" >Chai Wan, CHINA - CLK1</option>
 <option value="145522" >Chuo-ku, Tokyo, JAPAN - TYO1</option>
@@ -204,11 +205,19 @@ Options for the server global crossing <br>
         <pre>
         {{response|safe}}
         </pre>
-
-        <form action="/traceroute/" method="post">
+        <form action="/response/" method="post">
             Show graph: <input type="text" name="namefile" value="{{namefile}}">
             <input type="submit"><br>
         </form>
+
+    {%else%}
+        Some Recommendations        <ul>
+            <li>ip github: 192.30.253.113</li>
+            <li>ip google: 216.58.222.206</li>
+            <li>ip facebook: 69.171.230.68</li>
+            <li>ip debian: 130.89.148.14</li>
+        </ul>
+        
     {%endif%}
 </body>
 </html>

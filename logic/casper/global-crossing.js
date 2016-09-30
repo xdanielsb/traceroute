@@ -11,8 +11,8 @@ var casper = require('casper').create({
         loadImages:  false,        
         loadPlugins: false         
     },
-  //  logLevel: "debug",              // Only "info" level messages will be logged
-  //  verbose: true                  // log messages will be printed out to the console
+    logLevel: "debug",              // Only "info" level messages will be logged
+    verbose: true                  // log messages will be printed out to the console
 });
 
 /*
@@ -20,7 +20,7 @@ var casper = require('casper').create({
  */
 var utils = require('utils');
 var ip = casper.cli.get('addr');
-var router = casper.cli.get('router');
+var router = casper.cli.get('source');
 
 /*
  * URL for extrac information
@@ -56,7 +56,6 @@ casper.start(url, function() {
                 document.getElementsByTagName('option')[i].selected = 'selected';
             }
         }
-        
         
         //Select the input
         input = document.getElementsByName("destAddress")[0] ;
