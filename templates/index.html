@@ -69,6 +69,21 @@ https://bl.ocks.org/cjrd/6863459
                 <div class="col-lg-12">
 
                     <!----------- xxxx -->
+                {%with messages= get_flashed_messages()%}
+                    {%if messages%}
+                      {%for message in messages%}
+                      <!-- alert-warning-> red globe alert-info-> blue glob alert-succes->blue globs -->
+                        <div class="alert alert-info alert-dismissible" role="alert">
+                          <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span></button>
+                            <!-- &times; means an x-->
+                          {{message}}
+                        </div>
+                      {%endfor%}
+                    {%endif%}
+                  {%endwith%}
+
+
     <center>
     <form action="/traceroute/" method="post">
 

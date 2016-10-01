@@ -7,7 +7,7 @@
 #Import the framework
 from __future__ import print_function
 from flask import Flask, render_template, \
-        request, send_from_directory
+        request, send_from_directory, flash
 import os
 import os.path
 from process_file import get_parameters  # file for proccess the response
@@ -82,6 +82,7 @@ def traceroute():
 
     #reading the answer
     response = open(namefile+".temp", "r+").read() 
+    flash("The answeralready be prepared")
     return render_template('index.html',response=response,namefile=namefile)
 
 
