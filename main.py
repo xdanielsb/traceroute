@@ -107,11 +107,8 @@ def send_file(filename):
     return send_from_directory("~/Documents/myProjects/scripting/", filename+".temp")
 
 
-#Start the app
-if __name__=="__main__":
-    app.secret_key = '879sd3$55cDSeouae345euk5634$#%HDIDIHT($#'
-    app.config['SESSION_TYPE'] = 'filesystem'
+app.secret_key = '879sd3$55cDSeouae345euk5634$#%HDIDIHT($#'
+app.config['SESSION_TYPE'] = 'filesystem'
+app.run(debug=True)
 
-
-    app.run(debug=True)
 
