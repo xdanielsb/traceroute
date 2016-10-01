@@ -1,6 +1,11 @@
+"""
+" Daniel Santos 
+" September, 2016
+" This script helps to manage all the pages
+"""
+
 from __future__ import print_function
 import re
-
 
 def get_parameters(file_data):
     
