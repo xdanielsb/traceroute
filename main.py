@@ -7,7 +7,7 @@
 #Import the framework
 from __future__ import print_function
 from flask import Flask, render_template, \
-        request, send_from_directory, flash
+        request, send_from_directory, flash, session
 import os
 import os.path
 from process_file import get_parameters  # file for proccess the response
@@ -109,6 +109,9 @@ def send_file(filename):
 
 #Start the app
 if __name__=="__main__":
-    app.secret_key = '879sd3$55cDS'
+    app.secret_key = '879sd3$55cDSeouae345euk5634$#%HDIDIHT($#'
+    app.config['SESSION_TYPE'] = 'filesystem'
+
+
     app.run(debug=True)
 
