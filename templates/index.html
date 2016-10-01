@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+<!-- 
+Link for the graph
+https://bl.ocks.org/cjrd/6863459
+-->
 <html lang="en">
 
 <head>
@@ -9,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Scrolling Nav - Start Bootstrap Template</title>
+    <title> Multi-Looking Glass Server lol</title>
 
     <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{url_for('static',filename='css/scrolling-nav.css')}}" rel="stylesheet">
@@ -31,7 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Multi-Looking Glass Serve lol</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -39,17 +44,19 @@
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
+                        <a class="page-scroll" href="#page-top">Send Request</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">Information Route and Recommendations</a>
+                    </li>
+                    {%if response%}
+                    <li>
+                        <a class="page-scroll" href="#services">Graph</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#contact">Download, and upload new maps</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
+                    {%endif%}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -67,7 +74,7 @@
     <center>
     <form action="/traceroute/" method="post">
 
-    <select name="source" size=1>
+    <select name="source" class="form-control" size=1>
         <option value="" >Please, Choose an origin</option>
         {%if servers%}
             {%for server in servers["server1"] %}
@@ -76,7 +83,7 @@
         {%endif%}
     </SELECT>
 
-    <select name="source2" size=1>
+    <select name="source2" class="form-control" size=1>
         <option value="" >Please, Choose an origin</option>
         {%if servers%}
             {%for server in servers["server2"] %}
@@ -84,37 +91,14 @@
             {%endfor%}
         {%endif%}
     </select></td>
-    <br>
 
-    ip:<input type="text" placeholder="Destiny IP" name="ip"/><br>
-    origin: <input type="" placeholder="Change the origin instead of the servers" name="origin"/><br> 
+    ip:<input type="text" class="form-control" placeholder="Destiny IP" name="ip"/><br>
+    origin: <input type="text" class="form-control"  placeholder="Change the origin instead of the servers" name="origin"/><br> 
     <input type="submit"><br>
         
     </form>
     </center>
     
-    {%if response%}
-        <pre>
-        {{response|safe}}
-        </pre>
-        <form action="/response/" method="post">
-            Show graph: <input type="text" name="namefile" value="{{namefile}}">
-            <input type="submit"><br>
-        </form>
-        <a href="/{{namefile}}"> Download data file  for general information RAW TEXT</a>
-    {%else%}
-        Some Recommendations        <ul>
-            <li>ip github: 192.30.253.113</li>
-            <li>ip google: 216.58.222.206</li>
-            <li>ip facebook: 69.171.230.68</li>
-            <li>ip debian: 130.89.148.14</li>
-        </ul>
-        
-    {%endif%}
-<!----------- xxxx -->
-
-
-
                 </div>
             </div>
         </div>
@@ -125,8 +109,40 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>About Section</h1>
 
+{%if response%}
+                <h1>Route Information</h1>
+        <pre>
+        {{response|safe}}
+        </pre>
+
+    {%else%}
+        Some Recommendations        
+        <table style="width:100%">
+            <tr>
+                <th> DNS </th>
+                <th> IP </th>
+            </tr>
+            <tr>
+                <th> Github.com </th>
+                <th> 192.30.253.113 </th>
+            </tr>
+            <tr>
+                <th> Google.com </th>
+                <th> 216.58.222.206 </th>
+            </tr>
+            <tr>
+                <th> Facebook.com </th>
+                <th> 69.171.230.68 </th>
+            </tr>
+            <tr>
+                <th> Debian.org </th>
+                <th> 130.89.148.14 </th>
+            </tr>
+
+        </table>
+        
+    {%endif%}                    
 
                 </div>
             </div>
@@ -149,7 +165,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>Contact Section</h1>
+                    {%if response%}
+                    <h1>Download and preview</h1>
+                    <form action="/response/" method="post">
+                        Show graph: <input type="text" name="namefile" value="{{namefile}}">
+                        <input type="submit"><br>
+                    </form>
+                    <a href="/{{namefile}}"> Download data file  for general information RAW TEXT</a>
+                    {%endif%}
                 </div>
             </div>
         </div>
