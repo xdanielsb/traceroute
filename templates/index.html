@@ -103,7 +103,16 @@ https://bl.ocks.org/cjrd/6863459
                 <option value="{{server[0]}}" >{{server[1]}}</option>
             {%endfor%}
         {%endif%}
-    </select></td>
+    </select>
+
+    <select name="source3" class="form-control" size=1>
+        <option value="" >Please, Choose an origin</option>
+        {%if servers%}
+            {%for server in servers["server3"] %}
+                <option value="{{server[1]}}" >{{server[0]}}</option>
+            {%endfor%}
+        {%endif%}
+    </select>
 
     ip:<input type="text" class="form-control" placeholder="Destiny IP" name="ip"/><br>
     origin: <input type="text" class="form-control"  placeholder="Change the origin instead of the servers" name="origin"/><br> 

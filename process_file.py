@@ -16,13 +16,14 @@ def get_parameters(file_data):
     retrace = r'^\d+\s+(.+)'
 
     #Variables
-    targetip = None
-    ttlip = None
+    targetip = ""
+    ttlip = ""
     links = []
     route = {}
 
     #Apply the regular expresions over the result
     for line in file_data:
+        #print (line)
         #line without spaces 
         l= line.rstrip().lstrip()
         targeta = re.search(reTargetAddress, l)
@@ -49,7 +50,7 @@ def get_parameters(file_data):
 
     """
     print ()
-    print("target ip: "+targetip)
+    print("target ip: "+ str(targetip))
     print("ttl: "+ ttlip)
     print("links: ")
     print(links)
